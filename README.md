@@ -1,6 +1,6 @@
 # puppet-deprecate #
 
-A puppet function to show deprecations in your manifests
+A puppet function to log deprecations in your manifests
 
 ## Introduction ##
 
