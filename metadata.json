@@ -1,6 +1,6 @@
 {
   "name": "deanwilson-deprecate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "deanwilson",
   "summary": "Puppet function to show deprecations in your manifests",
   "license": "Apache-2.0",
