@@ -1,0 +1,3 @@
+fixtures:
+  symlinks:
+    deprecate: "#{source_dir}"

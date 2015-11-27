@@ -1,0 +1,31 @@
+{
+  "name": "deanwilson-deprecate",
+  "version": "0.0.1",
+  "author": "deanwilson",
+  "summary": "Puppet function to show deprecations in your manifests",
+  "license": "Apache-2.0",
+  "source": "https://github.com/deanwilson/puppet-deprecate.git",
+  "project_page": "https://github.com/deanwilson/puppet-deprecate",
+  "issues_url": "https://github.com/deanwilson/puppet-deprecate/issues",
+  "description": "Puppet function to show deprecations in your manifests",
+  "dependencies": [
+  
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat"
+    },
+    {
+      "operatingsystem": "Ubuntu"
+    },
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "Fedora"
+    },
+    {
+      "operatingsystem": "CentOS"
+    }
+  ]
+}
