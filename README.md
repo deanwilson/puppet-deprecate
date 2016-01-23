@@ -2,6 +2,9 @@
 
 A puppet function to log deprecations in your manifests
 
+[![Build Status](https://travis-ci.org/deanwilson/puppet-deprecate.svg?branch=master)](https://travis-ci.org/deanwilson/puppet-deprecate)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/deanwilson/deprecate.svg)](https://forge.puppetlabs.com/deanwilson/deprecate)
+
 ## Introduction ##
 
 Sometimes you need to add resources to your manifests that should only
