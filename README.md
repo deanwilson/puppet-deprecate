@@ -43,6 +43,11 @@ cause the entire run to fail.
     Class[Json_tester] expired on 20150120: Remove Foo at the end of the contract
     at modules/json_tester/manifests/init.pp:12:3 on node testy
 
+## Installation
+
+You can install this module from [PuppetForge](https://forge.puppet.com/):
+
+    puppet module install deanwilson-deprecate
 
 ### License ###
 
