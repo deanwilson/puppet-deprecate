@@ -2,9 +2,8 @@ require 'spec_helper'
 require 'timecop'
 
 describe 'deprecate' do
-
   ############### Test normal usage
- 
+
   describe 'before the deprecation has expired' do
     it 'should return nil' do
       Timecop.freeze(Time.local('2015-01-24'))
@@ -39,12 +38,11 @@ describe 'deprecate' do
 
   describe 'handling expected error conditions' do
     it 'should throw ArgumentError if not called with 2 or 3 arguments' do
-      should run.with_params( ).and_raise_error(ArgumentError)
+      should run.with_params.and_raise_error(ArgumentError)
     end
 
     it 'should throw ArgumentError if provided with an invalid date' do
       should run.with_params('2015012512', 'Test').and_raise_error(ArgumentError)
     end
   end
-
 end

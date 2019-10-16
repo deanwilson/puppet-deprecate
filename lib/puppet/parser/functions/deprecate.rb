@@ -1,6 +1,5 @@
 module Puppet::Parser::Functions
-  newfunction(:deprecate, :type => :rvalue, :doc => <<-EOD
-
+  newfunction(:deprecate, :type => :rvalue, :doc => <<-USAGE
     A puppet function to show deprecations in your manifests
 
       deprecate($date, $reason)
@@ -22,12 +21,11 @@ module Puppet::Parser::Functions
       * A date string, in either YYYYMMDD or YYYY-MM-DD formats
       * A free form string describing the what and why of the deprecation
       * An optional boolean to control if the run should be aborted. Defaults to false
-
-  EOD
+  USAGE
   ) do |args|
 
     unless args.length >= 2 && args.length <= 3
-      fail ArgumentError, ("deprecate(): wrong number of arguments (#{args.length} must be 2 or 3)")
+      fail ArgumentError, "deprecate(): wrong number of arguments (#{args.length} must be 2 or 3)"
     end
 
     date             = args[0].gsub(/-/, '')
@@ -35,13 +33,13 @@ module Puppet::Parser::Functions
     fail_compilation = args[2] || false
 
     unless date.length == 8
-      fail ArgumentError, ('deprecate(): Date must be provided in YYYY-MM-DD format')
+      fail ArgumentError, 'deprecate(): Date must be provided in YYYY-MM-DD format'
     end
 
     # YYYY MM DD - one true timestamp
     now = Time.now.strftime('%Y%m%d')
 
-    if (now >= date)
+    if now >= date
       rsrc = "#{@resource.type.capitalize}[#{@resource.name}]"
       message = "#{rsrc} expired on #{date}: #{reason}"
 
