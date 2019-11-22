@@ -4,15 +4,16 @@ on: [push]
 
 jobs:
   build:
-
+    env:
+      PUPPET_GEM_VERSION: "~> 6.10.0"
     runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Ruby 2.6
+    - name: Set up Ruby 2.5
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 2.5.x
     - name: Build and test with Rake
       run: |
         gem install bundler
