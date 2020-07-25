@@ -25,3 +25,9 @@ Metrics/AbcSize:
 
 Metrics/CyclomaticComplexity:
   Max: 10
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: 'compact'
+
+Style/Documentation:
+  Enabled: false
