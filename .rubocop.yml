@@ -34,3 +34,6 @@ Style/ClassAndModuleChildren:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
