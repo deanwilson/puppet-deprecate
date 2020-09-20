@@ -37,3 +37,6 @@ Style/Documentation:
 
 RSpec/DescribeClass:
   Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: False

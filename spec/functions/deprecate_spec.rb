@@ -8,7 +8,7 @@ describe 'deprecate' do
     it 'returns nil' do
       Timecop.freeze(Time.local('2015-01-24'))
 
-      is_expected.to run.with_params('2015-01-25', 'Remove Foo at the end of the contract.').and_return(nil)
+      expect(subject).to run.with_params('2015-01-25', 'Remove Foo at the end of the contract.').and_return(nil)
 
       Timecop.return
     end
@@ -20,7 +20,7 @@ describe 'deprecate' do
     it 'fails' do
       Timecop.freeze(Time.local('2015-01-26'))
 
-      is_expected.to run.with_params('2015-01-25', 'Remove Foo at the end of the contract.').and_return(nil)
+      expect(subject).to run.with_params('2015-01-25', 'Remove Foo at the end of the contract.').and_return(nil)
 
       Timecop.return
     end
@@ -28,7 +28,7 @@ describe 'deprecate' do
     it 'fails and aborts the compiliation' do
       Timecop.freeze(Time.local('2015-01-26'))
 
-      is_expected.to run.with_params('2015-01-25', 'Remove Foo at the end of the contract.', true).and_return(nil)
+      expect(subject).to run.with_params('2015-01-25', 'Remove Foo at the end of the contract.', true).and_return(nil)
 
       Timecop.return
     end
@@ -38,11 +38,11 @@ describe 'deprecate' do
 
   describe 'handling expected error conditions' do
     it 'throws ArgumentError if not called with 2 or 3 arguments' do
-      is_expected.to run.with_params.and_raise_error(ArgumentError)
+      expect(subject).to run.with_params.and_raise_error(ArgumentError)
     end
 
     it 'throws ArgumentError if provided with an invalid date' do
-      is_expected.to run.with_params('2015012512', 'Test').and_raise_error(ArgumentError)
+      expect(subject).to run.with_params('2015012512', 'Test').and_raise_error(ArgumentError)
     end
   end
 end
