@@ -1,3 +1,6 @@
+require:
+  - rubocop-rspec
+
 AllCops:
   NewCops: enable
 
@@ -31,3 +34,9 @@ Style/ClassAndModuleChildren:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: False
