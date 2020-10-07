@@ -2,7 +2,7 @@
 
 A puppet function to log deprecations in your manifests
 
-[![Build Status](https://travis-ci.org/deanwilson/puppet-deprecate.svg?branch=master)](https://travis-ci.org/deanwilson/puppet-deprecate)
+[![Build Status](https://travis-ci.org/deanwilson/puppet-deprecate.svg?branch=main)](https://travis-ci.org/deanwilson/puppet-deprecate)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/deanwilson/deprecate.svg)](https://forge.puppetlabs.com/deanwilson/deprecate)
 
 ## Introduction ##
@@ -26,13 +26,13 @@ cause the entire run to fail.
       # show a warning in puppetservers log
       deprecate('2015-01-20', 'Remove Foo at the end of the contract')
 
-      # fail the run and show a warning clients output and masters logfile
+      # fail the run and show a warning clients output and puppet server logfile
       deprecate('2015-01-25', 'Remove Foo at the end of the contract', true)
 
     }
 
 
-    # warning in the puppermaster log
+    # warning in the pupperserver log
     13:56:17,938 WARN  [puppet-server] Puppet Class[Json_tester]
       expired on 20150120: Remove Foo at the end of the contract
 
