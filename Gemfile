@@ -7,7 +7,7 @@ group :development, :test do
   gem 'rspec', '~> 3.12.0'
   gem 'rubocop', '~> 0.93.0', require: false
   gem 'rubocop-rspec', '~> 1.44.1'
-  gem 'simplecov', '~> 0.21.0'
+  gem 'simplecov', '~> 0.22.0'
   gem 'timecop'
 end
 
