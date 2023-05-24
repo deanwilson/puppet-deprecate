@@ -1,5 +1,6 @@
 require:
   - rubocop-rspec
+  - rubocop-rake
 
 AllCops:
   NewCops: enable
@@ -18,7 +19,6 @@ Layout/HashAlignment:
 
 Metrics/BlockLength:
   Max: 35
-  ExcludedMethods: [ 'describe' ]
 
 Metrics/MethodLength:
   Max: 25

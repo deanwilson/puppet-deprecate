@@ -5,11 +5,11 @@ on: [push]
 jobs:
   build:
     env:
-      PUPPET_GEM_VERSION: "~> 6.10.0"
+      PUPPET_GEM_VERSION: "~> 7.24.0"
     strategy:
       fail-fast: false
       matrix:
-        ruby: [2.5]
+        ruby: [2.7]
     runs-on: ubuntu-18.04
 
     steps:
