@@ -27,7 +27,7 @@ module Puppet::Parser::Functions
       raise ArgumentError, "deprecate(): wrong number of arguments (#{args.length} must be 2 or 3)"
     end
 
-    date             = args[0].gsub(/-/, '')
+    date             = args[0].gsub('-', '')
     reason           = args[1]
     fail_compilation = args[2] || false
 
